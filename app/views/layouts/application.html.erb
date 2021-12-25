@@ -10,6 +10,31 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="container">
+        <%= link_to root_path do %>
+          <h1>今日もいいこと</h1>
+        <% end %>
+        <%= link_to about_path do %>
+          <button type="button" class="btn btn-primary">About</button>
+        <% end %>
+        <%= link_to root_path do %>
+          <button type="button" class="btn btn-primary">投稿一覧</button>
+        <% end %>
+        <%= link_to root_path do %>
+          <button type="button" class="btn btn-primary">新規投稿</button>
+        <% end %>
+      </div>
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p class="text-center mt-5">© 2021 Fortune</p>
+      </div>
+    </footer>
   </body>
 </html>
