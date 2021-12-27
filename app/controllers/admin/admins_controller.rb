@@ -6,7 +6,7 @@ class Admin::AdminsController < ApplicationController
   def create
     @admin = Admin.new(admin_params)
     if @admin.save
-      redirect_to root_path, notice: '管理者権限で登録しました'
+      redirect_to admin_top_path, notice: '管理者権限を登録しました'
     else
       render :new
     end
