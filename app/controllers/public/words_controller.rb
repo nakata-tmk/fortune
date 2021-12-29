@@ -5,6 +5,7 @@ class Public::WordsController < ApplicationController
 
   def show
     @word = Word.find(params[:id])
+    @comment = Comment.new
   end
 
   def new

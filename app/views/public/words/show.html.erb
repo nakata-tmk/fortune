@@ -1,3 +1,13 @@
 <h2>投稿詳細</h2>
 <%= @word.created_at.strftime('%Y/%m/%d') %>
 <%= @word.body %>
+
+<%= form_with model:[@word, @comment], local: true do |f| %>
+  <%= f.text_area :body, placeholder: "コメントを入力", size: "40x3" %>
+  <%= f.submit "コメントする", class: "btn btn-primary btn-sm mb-4 ml-3" %>
+<% end %>
+
+<% @word.comments.each do |comment| %>
+  <%= comment.created_at.strftime('%Y/%m/%d') %>
+  <%= comment.body %>
+<% end %>
