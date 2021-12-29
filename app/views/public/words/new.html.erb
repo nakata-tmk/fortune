@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h2>新規投稿</h2>
+      <%= form_with model: @word, local: true do |f| %>
+        <table class="table-borderless">
+          <tr><td><%= f.label :body, '投稿文' %></td></tr>
+          <tr><td><%= f.text_field :body, size: "40x3" %></td></tr>
+          <tr><td><%= f.submit '投稿', class: 'btn btn-primary btn-sm' %></td></tr>
+        </table>
+      <% end %>
+    </div>
+  </div>
+</div>
