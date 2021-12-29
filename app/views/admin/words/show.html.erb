@@ -1,0 +1,15 @@
+<h2>投稿詳細</h2>
+<%= @word.created_at.strftime('%Y/%m/%d') %>
+<%= @word.body %>
+<i class="far fa-thumbs-up"></i>
+<%= @word.favorites.count %>
+
+<%= link_to "削除", admin_word_path(@word.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+
+<i class="fas fa-comment"></i>
+<%= @word.comments.count %>
+<% @word.comments.each do |comment| %>
+  <%= comment.created_at.strftime('%Y/%m/%d') %>
+  <%= comment.body %>
+  <%= link_to "削除", admin_comment_path(comment.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+<% end %>

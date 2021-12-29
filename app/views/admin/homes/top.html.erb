@@ -1,0 +1,11 @@
+<h2>管理者トップ</h2>
+<% @words.each do |word| %>
+  <%= word.created_at.strftime('%Y/%m/%d') %>
+  <%= link_to admin_word_path(word.id) do %>
+    <%= word.body %>
+  <% end %>
+  <i class="fas fa-comment"></i>
+  <%= word.comments.count %>
+  <i class="far fa-thumbs-up"></i>
+  <%= word.favorites.count %>
+<% end %>
