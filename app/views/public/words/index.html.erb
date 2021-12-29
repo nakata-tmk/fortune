@@ -4,4 +4,8 @@
   <%= link_to word_path(word.id) do %>
     <%= word.body %>
   <% end %>
+  <i class="fas fa-comment"></i>
+  <%= word.comments.count %>
+  <i class="far fa-thumbs-up"></i>
+  <%= word.favorites.count %>
 <% end %>

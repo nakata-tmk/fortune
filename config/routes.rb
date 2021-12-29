@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
     resources :words, only: [:index, :show, :new, :create] do
       resource :comments, only: [:create]
+      resource :favorites, only: [:create]
     end
   end
 end

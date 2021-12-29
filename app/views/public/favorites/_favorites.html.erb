@@ -1,0 +1,5 @@
+<%= link_to word_favorites_path(word), method: :post, remote: true do %>
+  <p>
+    いいね <i class="far fa-thumbs-up"></i><%= word.favorites.count %>
+  </p>
+<% end %>
