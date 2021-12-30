@@ -16,3 +16,27 @@
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  margin: 3px 8px 3px 8px;
+}
+
+li a:link {
+  color: #8ad0a3;
+  text-decoration: none;
+}
+
+li a:visited {
+  color: #8ad0a3;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #8ad0a3;
+  text-decoration: none;
+}

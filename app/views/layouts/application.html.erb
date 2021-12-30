@@ -12,32 +12,29 @@
   <body>
     <header>
       <div class="container">
-        <%= link_to root_path do %>
+        <div class="row justify-content-center">
           <h1>今日もいいこと</h1>
-        <% end %>
+        </div>
 
-        <% if current_admin %>
-          <%= link_to admin_top_path do %>
-            <button type="button" class="btn btn-primary">投稿一覧</button>
+        <div class="row justify-content-center">
+          <% if current_admin %>
+            <ul>
+              <li><%= link_to '投稿一覧', admin_top_path %></li>
+              <li><%= link_to '利用方法', about_path %></li>
+              <li><%= link_to 'ログアウト', admin_logout_path, method: :delete %></li>
+          <% else %>
+              <li><%= link_to root_path do %>
+                ホーム<i class="fas fa-home fa-fw"></i>
+              <% end %></li>
+              <li><%= link_to about_path do %>
+                利用方法<i class="fas fa-info fa-fw"></i>
+              <% end %></li>
+              <li><%= link_to new_word_path do %>
+                新規投稿<i class="fas fa-edit fa-fw"></i>
+              <% end %></li>
+            </ul>
           <% end %>
-          <%= link_to admin_logout_path, method: :delete do %>
-            <button type="button" class="btn btn-primary">管理者ログアウト</button>
-          <% end %>
-        <% else %>
-          <%= link_to about_path do %>
-            <button type="button" class="btn btn-primary">About</button>
-          <% end %>
-          <%= link_to words_path do %>
-            <button type="button" class="btn btn-primary">投稿一覧</button>
-          <% end %>
-          <%= link_to new_word_path do %>
-            <button type="button" class="btn btn-primary">新規投稿</button>
-          <% end %>
-
-          <%= link_to admin_login_path do %>
-            <button type="button" class="btn btn-primary">管理者ログイン</button>
-          <% end %>
-        <% end %>
+        </div>
       </div>
     </header>
 
@@ -59,7 +56,9 @@
 
     <footer>
       <div class="container">
-        <p class="text-center mt-5">© 2021 Fortune</p>
+        <div class="row justify-content-center">
+          <p>© 2021 Fortune</p>
+        </div>
       </div>
     </footer>
   </body>

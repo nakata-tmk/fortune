@@ -6,15 +6,14 @@ Rails.application.routes.draw do
     delete '/logout', to: 'sessions#destroy'
     resource :admins, only: [:new, :create]
     resources :words, only: [:show, :destroy] do
-    resources :comments, only: [:destroy]
+      resources :comments, only: [:destroy]
     end
   end
 
   scope module: :public do
     root to: 'homes#top'
     get '/about' => 'homes#about', as: 'about'
-
-    resources :words, only: [:index, :show, :new, :create] do
+    resources :words, only: [:show, :new, :create] do
       resource :comments, only: [:create]
       resource :favorites, only: [:create]
     end

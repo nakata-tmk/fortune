@@ -1,5 +1,6 @@
 class Public::HomesController < ApplicationController
-  def top
+   def top
+    @words = Word.all
   end
 
   def about
