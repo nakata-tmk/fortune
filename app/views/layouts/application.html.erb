@@ -13,25 +13,27 @@
     <header>
       <div class="container">
         <div class="row justify-content-center">
-          <h1>今日もいいこと</h1>
+          <%= image_tag "title.png", class: "title-image" %>
         </div>
 
         <div class="row justify-content-center">
           <% if current_admin %>
             <ul>
-              <li><%= link_to '投稿一覧', admin_top_path %></li>
-              <li><%= link_to '利用方法', about_path %></li>
-              <li><%= link_to 'ログアウト', admin_logout_path, method: :delete %></li>
+              <li><%= image_tag "flower-icon-pink.png", class: "nav-image" %></li>
+              <li><%= link_to 'Home', admin_top_path %></li>
+              <li><%= image_tag "flower-icon-pink.png", class: "nav-image" %></li>
+              <li><%= link_to 'About', about_path %></li>
+              <li><%= image_tag "flower-icon-pink.png", class: "nav-image" %></li>
+              <li><%= link_to 'Logout', admin_logout_path, method: :delete %></li>
+              <li><%= image_tag "flower-icon-pink.png", class: "nav-image" %></li>
           <% else %>
-              <li><%= link_to root_path do %>
-                ホーム<i class="fas fa-home fa-fw"></i>
-              <% end %></li>
-              <li><%= link_to about_path do %>
-                利用方法<i class="fas fa-info fa-fw"></i>
-              <% end %></li>
-              <li><%= link_to new_word_path do %>
-                新規投稿<i class="fas fa-edit fa-fw"></i>
-              <% end %></li>
+              <li><%= image_tag "flower-icon-blue.png", class: "nav-image" %></li>
+              <li><%= link_to root_path do %>Home<% end %></li>
+              <li><%= image_tag "flower-icon-blue.png", class: "nav-image" %></li>
+              <li><%= link_to about_path do %>About<% end %></li>
+              <li><%= image_tag "flower-icon-blue.png", class: "nav-image" %></li>
+              <li><%= link_to new_word_path do %>新規投稿<% end %></li>
+              <li><%= image_tag "flower-icon-blue.png", class: "nav-image" %></li>
             </ul>
           <% end %>
         </div>
@@ -57,7 +59,7 @@
     <footer>
       <div class="container">
         <div class="row justify-content-center">
-          <p>© 2021 Fortune</p>
+          <p>© 2021 Today's Happy</p>
         </div>
       </div>
     </footer>

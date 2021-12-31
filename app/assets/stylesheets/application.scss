@@ -17,6 +17,7 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
+
 ul {
   list-style: none;
 }
@@ -27,16 +28,30 @@ li {
 }
 
 li a:link {
-  color: #8ad0a3;
+  color: black;
   text-decoration: none;
 }
 
 li a:visited {
-  color: #8ad0a3;
+  color: black;
   text-decoration: none;
 }
 
 li a:hover {
-  color: #8ad0a3;
+  color: #cde9ea;
   text-decoration: none;
+}
+
+.title-image {
+  width: 20%;
+  max-width: 20%;
+  height: auto;
+  object-fit: cover;
+}
+
+.nav-image {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  padding: 0;
 }
