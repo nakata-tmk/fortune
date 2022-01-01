@@ -1,22 +1,38 @@
-<div id="message">
+<div class="container">
+  <div class="row justify-content-center">
+    <h3>管理サインイン</h3>
+  </div>
+
+  <div class="row justify-content-center">
+    <div id="message">
       <% if @admin.errors.any? %>
         <% @admin.errors.full_messages.each do |message| %>
           <p><%= message %></p>
         <% end %>
       <% end %>
     </div>
+  </div>
 
-<h2>管理者サインイン</h2>
-
-<%= form_with model: [:admin, @admin], local:true do |f| %>
-  <%= f.label :email, "メールアドレス" %>
-  <%= f.email_field :email, autocomplete: "email" %>
-
-  <%= f.label :password, "パスワード" %>
-  <%= f.password_field :password, autocomplete: "new-password" %>
-
-  <%= f.label :password_confirmation, "パスワード確認用" %>
-  <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-
-  <%= f.submit "サインイン", class: "btn btn-primary btn-sm" %>
-<% end %>
+  <div class="row justify-content-center mt-3">
+    <table class="table-borderless">
+      <%= form_with model: [:admin, @admin], local:true do |f| %>
+      <tr>
+        <td><%= f.label :email, "メールアドレス" %></td>
+        <td><%= f.email_field :email, autocomplete: "email" %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :password, "パスワード" %></td>
+        <td><%= f.password_field :password, autocomplete: "current-password" %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :password_confirmation, "パスワード確認用" %></td>
+        <td><%= f.password_field :password_confirmation, autocomplete: "new-password" %></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><%= f.submit "サインイン", class: "btn btn-secondary btn-sm" %></td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

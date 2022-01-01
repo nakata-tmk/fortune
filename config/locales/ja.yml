@@ -3,6 +3,7 @@ ja:
     attributes:
       admin:
         email: 'メールアドレス'
+        password: 'パスワード'
 
       word:
         body: '本文'

@@ -19,9 +19,20 @@
 
 #message {
   color: #dc143c;
+  letter-spacing: 0.1em;
 }
 
-h3 {
+#notice {
+  color: #79d7da;
+  letter-spacing: 0.5em;
+}
+
+#alert {
+  color: #dc143c;
+  letter-spacing: 0.5em;
+}
+
+h3, h4 {
   letter-spacing: 0.5em;
 }
 

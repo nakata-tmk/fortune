@@ -20,9 +20,9 @@
           <% if current_admin %>
             <ul>
               <li><%= image_tag "flower-icon-pink.png", class: "nav-image" %></li>
-              <li><%= link_to 'Home', admin_top_path %></li>
+              <li><%= link_to 'Home', root_path %></li>
               <li><%= image_tag "flower-icon-pink.png", class: "nav-image" %></li>
-              <li><%= link_to 'About', about_path %></li>
+              <li><%= link_to 'Admin Top', admin_top_path %></li>
               <li><%= image_tag "flower-icon-pink.png", class: "nav-image" %></li>
               <li><%= link_to 'Logout', admin_logout_path, method: :delete %></li>
               <li><%= image_tag "flower-icon-pink.png", class: "nav-image" %></li>
@@ -41,16 +41,20 @@
     </header>
 
     <main>
-      <div id="notice">
-        <% if flash[:notice] %>
-          <p><%= flash[:notice] %></p>
-        <% end %>
-      </div>
+      <div class="container">
+        <div class="row justify-content-center mb-2">
+          <div id="notice">
+            <% if flash[:notice] %>
+              <p><%= flash[:notice] %></p>
+            <% end %>
+          </div>
 
-      <div id="alert">
-        <% if flash[:alert] %>
-          <p><%= flash[:alert] %></p>
-        <% end %>
+          <div id="alert">
+            <% if flash[:alert] %>
+              <p><%= flash[:alert] %></p>
+            <% end %>
+          </div>
+        </div>
       </div>
 
       <%= yield %>
@@ -59,11 +63,19 @@
     <footer>
       <div class="container mt-5">
         <div class="row justify-content-center">
-          <%= image_tag "flower-icon-blue.png", class: "footer-image" %>
-          <%= image_tag "flower-icon-blue.png", class: "footer-image" %>
-          <%= image_tag "flower-icon-blue.png", class: "footer-image" %>
-          <%= image_tag "flower-icon-blue.png", class: "footer-image" %>
-          <%= image_tag "flower-icon-blue.png", class: "footer-image" %>
+          <% if current_admin %>
+            <%= image_tag "flower-icon-pink.png", class: "footer-image" %>
+            <%= image_tag "flower-icon-pink.png", class: "footer-image" %>
+            <%= image_tag "flower-icon-pink.png", class: "footer-image" %>
+            <%= image_tag "flower-icon-pink.png", class: "footer-image" %>
+            <%= image_tag "flower-icon-pink.png", class: "footer-image" %>
+          <% else %>
+            <%= image_tag "flower-icon-blue.png", class: "footer-image" %>
+            <%= image_tag "flower-icon-blue.png", class: "footer-image" %>
+            <%= image_tag "flower-icon-blue.png", class: "footer-image" %>
+            <%= image_tag "flower-icon-blue.png", class: "footer-image" %>
+            <%= image_tag "flower-icon-blue.png", class: "footer-image" %>
+          <% end %>
         </div>
         <div class="row justify-content-center mb-5">
           <p>© 2021 Today's Happy</p>

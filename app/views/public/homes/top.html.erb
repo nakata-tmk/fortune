@@ -36,10 +36,10 @@
               <%= link_to "詳細", word_path(word.id), class: 'btn btn-primary btn-sm' %>
             </div>
             <div class="col-8 text-right pt-1">
-              <i class="fas fa-comment fa-fw"></i>
-              <%= word.comments.count %>
               <i class="fas fa-heart fa-fw"></i>
               <%= word.favorites.count %>
+              <i class="fas fa-comment fa-fw"></i>
+              <%= word.comments.count %>
             </div>
           </div>
         </div>
