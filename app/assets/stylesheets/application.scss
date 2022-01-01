@@ -139,7 +139,7 @@ li a:hover {
 
 .card {
   margin: 8px auto;
-  width: 330px;
+  width: 100%;
   min-height: 180px;
 }
 
@@ -158,4 +158,24 @@ select {
   padding: 3px;
   margin: 3px;
   padding-left: 7px;
+}
+
+.pagination {
+  justify-content: center;
+}
+
+.page,.next,.last,.first,.prev {
+  padding: 5px;
+}
+
+.pagination a:link {
+  color: #cce9ea;
+}
+
+.pagination a:visited {
+  color: #b5cccd;
+}
+
+.pagination a:hover {
+  color: #79d7da;
 }

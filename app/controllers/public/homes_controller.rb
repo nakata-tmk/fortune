@@ -4,7 +4,7 @@ class Public::HomesController < ApplicationController
     if params[:sort].present?
       @words = Word.sort(params[:sort])
     else
-      @words = Word.all.order(created_at: :desc)
+      @words = Word.page(params[:page]).order(created_at: :desc)
     end
   end
 

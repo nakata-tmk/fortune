@@ -3,7 +3,7 @@
     <div class="col-8">
       <div class="top-text">
         <p>
-          このサイトは、1日のいいこと、良かったことを投稿するサイトです。<br>
+          このサイトは、1日の良かったこと、嬉しかったことを投稿するサイトです。<br>
           毎日楽しいことばかりではないかもしれませんが、そんなときこそ、
           ちょっとした"いいこと"を探してみませんか？
         </p>
@@ -30,31 +30,30 @@
     <% end %>
   </div>
 
-
-
-
-
-  <div class="row d-flex flex-row">
+  <div class="row d-flex flex-wrap">
     <% @words.each do |word| %>
-      <div class="card">
-        <div class="card-body">
-          <p><%= word.created_at.strftime('%Y/%m/%d') %></p>
-          <p><%= word.body %></p>
-        </div>
-        <div class="card-footer">
-          <div class="row">
-            <div class="col-4">
-              <%= link_to "詳細", word_path(word.id), class: 'btn btn-primary btn-sm' %>
-            </div>
-            <div class="col-8 text-right pt-1 pink">
-              <i class="fas fa-heart fa-fw"></i>
-              <%= word.favorites.count %>
-              <i class="fas fa-comment fa-fw"></i>
-              <%= word.comments.count %>
+      <div class="col-lg-4 col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <p><%= word.created_at.strftime('%Y/%m/%d') %></p>
+            <p><%= word.body %></p>
+          </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col-4">
+                <%= link_to "詳細", word_path(word.id), class: 'btn btn-primary btn-sm' %>
+              </div>
+              <div class="col-8 text-right pt-1 pink">
+                <i class="fas fa-heart fa-fw"></i>
+                <%= word.favorites.count %>
+                <i class="fas fa-comment fa-fw"></i>
+                <%= word.comments.count %>
+              </div>
             </div>
           </div>
         </div>
       </div>
     <% end %>
   </div>
+  <%= paginate @words %>
 </div>
