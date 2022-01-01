@@ -1,3 +1,20 @@
+<div class="container">
+  <div class="row justify-content-center line">
+    <div class="col-8">
+      <div class="top-text">
+        <p>
+          このサイトは、1日のいいこと、良かったことを投稿するサイトです。<br>
+          毎日楽しいことばかりではないかもしれませんが、そんなときこそ、
+          ちょっとした"いいこと"を探してみませんか？
+        </p>
+      </div>
+    </div>
+    <div class="col-4 text-right">
+      <%= image_tag "AdobeStock_415756294.jpg", class: "image" %>
+    </div>
+  </div>
+</div>
+
 <h2>投稿一覧</h2>
 <% @words.each do |word| %>
   <%= word.created_at.strftime('%Y/%m/%d') %>

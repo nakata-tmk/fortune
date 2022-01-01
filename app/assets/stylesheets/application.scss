@@ -17,6 +17,14 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
+#message {
+  color: #dc143c;
+}
+
+p {
+  line-height: 1em;
+  margin: 0.5em;
+}
 
 ul {
   list-style: none;
@@ -54,4 +62,39 @@ li a:hover {
   height: 20px;
   object-fit: cover;
   padding: 0;
+}
+
+.btn-primary {
+  background: #cde9ea;
+  border: #cde9ea;
+}
+
+.btn-primary:hover {
+  background: #d9f9fa;
+}
+
+.line {
+  background: #cde9ea;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  position: relative;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}
+
+.top-text {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-10%, -50%);
+  -webkit-transform: translate(-10%, -50%);
+}
+
+.top-text p {
+  line-height: 25px;
+  font-size: 14px;
 }
