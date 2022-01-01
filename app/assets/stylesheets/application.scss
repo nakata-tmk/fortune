@@ -21,6 +21,10 @@
   color: #dc143c;
 }
 
+h3 {
+  letter-spacing: 0.5em;
+}
+
 p {
   line-height: 1em;
   margin: 0.5em;
@@ -33,6 +37,7 @@ ul {
 li {
   display: inline-block;
   margin: 3px 8px 3px 8px;
+  letter-spacing: 0.2em;
 }
 
 li a:link {
@@ -97,4 +102,15 @@ li a:hover {
 .top-text p {
   line-height: 25px;
   font-size: 14px;
+}
+
+.card {
+  margin: 5px;
+  width: 310px;
+}
+
+.card-footer {
+  background: #fff;
+  border-top: none;
+  padding-top: 0;
 }

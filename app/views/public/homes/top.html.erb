@@ -13,16 +13,32 @@
       <%= image_tag "AdobeStock_415756294.jpg", class: "image" %>
     </div>
   </div>
-</div>
 
-<h2>投稿一覧</h2>
-<% @words.each do |word| %>
-  <%= word.created_at.strftime('%Y/%m/%d') %>
-  <%= link_to word_path(word.id) do %>
-    <%= word.body %>
-  <% end %>
-  <i class="fas fa-comment"></i>
-  <%= word.comments.count %>
-  <i class="far fa-thumbs-up"></i>
-  <%= word.favorites.count %>
-<% end %>
+  <div class="row justify-content-center mt-4">
+    <h3>投稿一覧</h3>
+  </div>
+
+  <div class="row d-flex flex-row">
+    <% @words.each do |word| %>
+      <div class="card">
+        <div class="card-body">
+          <p><%= word.created_at.strftime('%Y/%m/%d') %></p>
+          <p><%= word.body %></p>
+        </div>
+        <div class="card-footer">
+          <div class="row">
+            <div class="col-4">
+              <%= link_to "詳細", word_path(word.id), class: 'btn btn-primary btn-sm' %>
+            </div>
+            <div class="col-8 text-right pt-1">
+              <i class="fas fa-comment"></i>
+              <%= word.comments.count %>
+              <i class="far fa-thumbs-up"></i>
+              <%= word.favorites.count %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
