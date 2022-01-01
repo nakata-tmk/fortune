@@ -35,7 +35,7 @@
   <div class="row justify-content-center mt-3">
     <div class="col-6">
       <%= form_with model:[@word, @comment], local: true do |f| %>
-        <%= f.text_area :body, placeholder: "コメントを入力", size: "40x2" %>
+        <%= f.text_area :body, placeholder: "コメントを入力", size: "40x3" %>
         <%= f.submit "コメント", class: "btn btn-primary btn-sm mb-4" %>
       <% end %>
     </div>

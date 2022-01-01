@@ -9,7 +9,7 @@ class Admin::SessionsController < ApplicationController
       session[:admin_id] = admin.id
       redirect_to admin_top_path, notice: '管理者権限でログインしました'
     else
-      redirect_to admin_login_path, alert: 'ログイン権限がありません'
+      redirect_to admin_login_path, alert: 'ログインできません'
     end
   end
 

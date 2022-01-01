@@ -1,19 +1,24 @@
-<div id="message">
-      <% if @admin.errors.any? %>
-        <% @admin.errors.full_messages.each do |message| %>
-          <p><%= message %></p>
-        <% end %>
+<div class="container">
+  <div class="row justify-content-center mt-3">
+    <h2>管理者ログイン</h2>
+  </div>
+
+  <div class="row justify-content-center mt-3">
+    <table class="table-borderless">
+      <%= form_with model: [:admin, @admin], url: admin_login_path, local:true do |f| %>
+      <tr>
+        <td><%= f.label :email, "メールアドレス" %></td>
+        <td><%= f.email_field :email, autocomplete: "email" %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :password, "パスワード" %></td>
+        <td><%= f.password_field :password, autocomplete: "current-password" %></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><%= f.submit "ログイン", class: "btn btn-primary btn-sm" %></td>
+      </tr>
       <% end %>
-    </div>
-
-<h2>管理者ログイン</h2>
-
-<%= form_with model: [:admin, @admin], url: admin_login_path, local:true do |f| %>
-  <%= f.label :email, "メールアドレス" %>
-  <%= f.email_field :email, autocomplete: "email" %>
-
-  <%= f.label :password, "パスワード" %>
-  <%= f.password_field :password, autocomplete: "current-password" %>
-
-  <%= f.submit "ログイン", class: "btn btn-primary btn-sm" %>
-<% end %>
+    </table>
+  </div>
+</div>
