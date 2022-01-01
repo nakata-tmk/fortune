@@ -1,17 +1,35 @@
-<h2>投稿詳細</h2>
-<%= @word.created_at.strftime('%Y/%m/%d') %>
-<%= @word.body %>
+<div class="container">
+  <div class="row justify-content-center">
+    <h3>投稿内容</h3>
+  </div>
 
-<div id="favorite_<%= @word.id %>">
-  <%= render partial: 'public/favorites/favorites', locals: { word: @word } %>
+  <div class="row justify-content-center">
+    <div class="card">
+      <div class="card-body">
+        <p><%= @word.created_at.strftime('%Y/%m/%d') %></p>
+        <p><%= @word.body %></p>
+      </div>
+      <div class="card-footer">
+        <div id="favorite_<%= @word.id %>">
+          <%= render partial: 'public/favorites/favorites', locals: { word: @word } %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row justify-content-center">
+    <%= form_with model:[@word, @comment], local: true do |f| %>
+      <%= f.text_area :body, placeholder: "コメントを入力", size: "40x3" %>
+      <%= f.submit "コメントする", class: "btn btn-primary btn-sm mb-4 ml-3" %>
+    <% end %>
+  </div>
+
+  <div class="row justify-content-center">
+      <% @word.comments.each do |comment| %>
+      <%= comment.created_at.strftime('%Y/%m/%d') %>
+      <%= comment.body %>
+    <% end %>
+  </div>
 </div>
-
-<%= form_with model:[@word, @comment], local: true do |f| %>
-  <%= f.text_area :body, placeholder: "コメントを入力", size: "40x3" %>
-  <%= f.submit "コメントする", class: "btn btn-primary btn-sm mb-4 ml-3" %>
-<% end %>
-
-<% @word.comments.each do |comment| %>
-  <%= comment.created_at.strftime('%Y/%m/%d') %>
-  <%= comment.body %>
-<% end %>

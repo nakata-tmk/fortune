@@ -25,6 +25,10 @@ h3 {
   letter-spacing: 0.5em;
 }
 
+footer p {
+  letter-spacing: 3px;
+}
+
 p {
   line-height: 1em;
   margin: 0.5em;
@@ -69,6 +73,14 @@ li a:hover {
   padding: 0;
 }
 
+.footer-image {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  padding: 0;
+  margin: 5px 45px;
+}
+
 .btn-primary {
   background: #cde9ea;
   border: #cde9ea;
@@ -105,8 +117,9 @@ li a:hover {
 }
 
 .card {
-  margin: 5px;
-  width: 310px;
+  margin: 8px auto;
+  width: 330px;
+  min-height: 180px;
 }
 
 .card-footer {
