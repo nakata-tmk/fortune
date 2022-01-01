@@ -6,7 +6,9 @@ class Public::CommentsController < ApplicationController
     if comment.save
       redirect_to request.referer, notice: 'コメントしました'
     else
-      redirect_to request.referer, alert: 'コメントを入力してください'
+      @word = word
+      @comment = comment
+      render 'public/words/show'
     end
   end
 

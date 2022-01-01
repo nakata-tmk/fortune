@@ -1,3 +1,28 @@
 // Place all the styles related to the public/words controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com/4
+.table-borderless {
+  margin-left: 15px;
+}
+
+.table-borderless td{
+  padding: 5px;
+}
+
+.show-back {
+  width: 80%;
+  height: 250px;
+  background-image: image-url("f1026_0.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.show-text {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  transform: translate(-20%, -45%);
+  -webkit-transform: translate(-20%, -45%);
+}

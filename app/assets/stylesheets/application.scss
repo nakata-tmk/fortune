@@ -87,7 +87,17 @@ li a:hover {
 }
 
 .btn-primary:hover {
-  background: #d9f9fa;
+  background: #79d7da;
+}
+
+.btn-secondary {
+  background: #FAD2DA;
+  border: #FAD2DA;
+}
+
+.btn-secondary:hover {
+  background: #FAABBA;
+  border: #FAD2DA;
 }
 
 .line {
@@ -127,3 +137,4 @@ li a:hover {
   border-top: none;
   padding-top: 0;
 }
+
