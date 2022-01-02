@@ -10,3 +10,7 @@ ja:
 
       comment:
         body: 'コメント文'
+
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M"

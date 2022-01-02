@@ -35,7 +35,7 @@
       <div class="col-lg-4 col-sm-6">
         <div class="card">
           <div class="card-body">
-            <p><%= word.created_at.strftime('%Y/%m/%d') %></p>
+            <p><%= I18n.localize word.created_at %></p>
             <p><%= word.body %></p>
           </div>
           <div class="card-footer">

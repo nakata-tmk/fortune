@@ -10,7 +10,7 @@
         </tr>
         <tr>
           <th>日時</th>
-          <td><%= @word.created_at.strftime('%Y/%m/%d') %></td>
+          <td><%= I18n.localize @word.created_at %></td>
         </tr>
         <tr>
           <th>投稿文</th>
@@ -36,7 +36,7 @@
       <table class="table table-striped">
         <% @word.comments.each do |comment| %>
         <tr>
-          <td><%= comment.created_at.strftime('%Y/%m/%d') %></td>
+          <td><%= I18n.localize comment.created_at %></td>
           <td><%= comment.body %></td>
           <td><%= link_to "削除", admin_word_comment_path(comment.id), method: :delete, "data-confirm" => "本当に削除しますか？" %></td>
         </tr>
