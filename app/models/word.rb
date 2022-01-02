@@ -6,6 +6,7 @@ class Word < ApplicationRecord
 
   scope :sort_list, -> {
     {
+      "並替え" => "",
       "新着順" => "new",
       "古い順" => "old",
       "いいね順" => "favorites"
