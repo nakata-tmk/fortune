@@ -18,10 +18,10 @@
 10～30代の一般ユーザ
 
 ## 設計書
--投稿機能
--コメント機能
--いいね機能
--RSpec
+* 投稿機能
+* コメント機能
+* いいね機能
+* RSpec
 
 ## 開発環境
 * OS：Linux(CentOS)
@@ -31,6 +31,6 @@
 * IDE：Cloud9
 
 ## 使用素材
-[Adobe Stock](https://stock.adobe.com/jp/)
-[Frame Design](https://frames-design.com/)
-[851マカポップVer1.00](http://pm85122.onamae.jp/851mkpop.html)
+* [Adobe Stock](https://stock.adobe.com/jp/)
+* [Frame Design](https://frames-design.com/)
+* [851マカポップVer1.00](http://pm85122.onamae.jp/851mkpop.html)
