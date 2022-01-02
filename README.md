@@ -1,24 +1,36 @@
-# README
+# Today's Happy
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+1日のちょっとした「Happy」を投稿するサイト
 
-Things you may want to cover:
+### サイトテーマ
+* 1日の良かったこと、嬉しかったことを投稿する
+* ユーザー登録なし、匿名で気軽に投稿できる
+* 他の人の投稿にコメント、いいねができる
 
-* Ruby version
+### テーマを選んだ理由
+人は何度も繰り返し反復したものほど、記憶に残りやすくなっているそうです。
+そのため、ついつい考え込んでしまう嫌だったことや辛かったことほど、記憶に残りやすくなっています。
+悩んだり反省したり、後悔したりする時間も大切だとは思いますが、それと同じだけ、良かったことも思い出して、
+気持ちも記憶もリセットできればと思い、本サイトを作成しました。
 
-* System dependencies
+### ターゲットユーザ
+10～30代の一般ユーザ
 
-* Configuration
+## 設計書
+-投稿機能
+-コメント機能
+-いいね機能
+-RSpec
 
-* Database creation
+## 開発環境
+* OS：Linux(CentOS)
+* 言語：HTML,CSS,JavaScript,Ruby,SQL
+* フレームワーク：Ruby on Rails
+* JSライブラリ：jQuery
+* IDE：Cloud9
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用素材
+[Adobe Stock](https://stock.adobe.com/jp/)
+[Frame Design](https://frames-design.com/)
+[851マカポップVer1.00](http://pm85122.onamae.jp/851mkpop.html)
